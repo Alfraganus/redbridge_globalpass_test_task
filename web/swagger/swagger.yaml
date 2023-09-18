@@ -1,0 +1,21 @@
+openapi: 3.0.0
+info:
+  title: 'GLOBALPAS API-list'
+  version: '1.0'
+paths:
+  /v1/get-books/:
+    get:
+      tags:
+        - books
+      operationId: get-all-books
+      responses:
+        '200':
+          description: get-all-books
+  /v1/create-books/:
+    post:
+      tags:
+        - books
+      operationId: create-new-books
+      responses:
+        '200':
+          description: 'create a new book'
