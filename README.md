@@ -26,7 +26,7 @@ yii migrate
 
 4) To see swagger endpoints
 ~~~
-localhost/swagger
+{{url}}/swagger
 ~~~
 
 
