@@ -12,6 +12,10 @@ modules:
     config:
         Yii2:
             configFile: 'config/test.php'
+    Db:
+        dsn: 'pgsql:host=localhost;dbname=redbridge_test'  # Adjust the database name
+        user: 'postgres'  # Adjust the database username
+        password: 'postgres'  # Adjust the database password
 
 # To enable code coverage:
 #coverage:

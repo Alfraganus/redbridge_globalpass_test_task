@@ -1,7 +1,8 @@
 <?php
-namespace app\modules\v1\models\provider;
+namespace app\modules\v1\books\models\provider;
 
-use app\modules\v1\models\Books;
+
+use app\modules\v1\books\models\Books;
 
 class BookProvider extends Books
 {

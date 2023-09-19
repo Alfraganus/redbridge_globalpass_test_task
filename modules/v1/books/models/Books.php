@@ -1,7 +1,10 @@
 <?php
+namespace app\modules\v1\books\models;
 
-namespace app\modules\v1\models;
-
+use app\modules\v1\authors\models\Authors;
+use app\modules\v1\books\repository\BooksRepository;
+use app\modules\v1\genres\models\Genres;
+use app\modules\v1\language\models\Languages;
 use Yii;
 
 /**
@@ -93,10 +96,10 @@ class Books extends \yii\db\ActiveRecord
 
     /**
      * {@inheritdoc}
-     * @return \app\modules\v1\repository\BooksRepository the active query used by this AR class.
+     * @return BooksRepository the active query used by this AR class.
      */
     public static function find()
     {
-        return new \app\modules\v1\repository\BooksRepository(get_called_class());
+        return new BooksRepository(get_called_class());
     }
 }

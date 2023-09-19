@@ -1,5 +1,8 @@
 <?php
 
+use app\modules\v1\authors\models\Authors;
+use app\modules\v1\books\models\Books;
+use app\modules\v1\language\models\Languages;
 use yii\db\Migration;
 
 /**
@@ -26,7 +29,7 @@ class m230918_165152_create_sample_data extends Migration
         ];
 
         foreach ($authorNames as $name) {
-            $authorModel = new \app\modules\v1\models\Authors();
+            $authorModel = new Authors();
             $authorModel->name = $name;
             $authorModel->save();
         }
@@ -40,7 +43,7 @@ class m230918_165152_create_sample_data extends Migration
 
         $languages = ['English', 'Russian', 'French', 'Spanish'];
         foreach ($languages as $language) {
-            $LanguageModel = new \app\modules\v1\models\Languages();
+            $LanguageModel = new Languages();
             $LanguageModel->name = $language;
             $LanguageModel->save();
         }
@@ -97,7 +100,7 @@ class m230918_165152_create_sample_data extends Migration
             'The Count of Monte Cristo',
         ];
         foreach ($bookTitles as $title) {
-            $LanguageModel = new \app\modules\v1\models\Books();
+            $LanguageModel = new Books();
             $LanguageModel->title = $title;
             $LanguageModel->author_id = rand(1,10);
             $LanguageModel->genre = rand(1,5);

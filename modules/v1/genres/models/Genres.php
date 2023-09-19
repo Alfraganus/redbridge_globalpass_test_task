@@ -1,25 +1,23 @@
 <?php
-
-namespace app\modules\v1\models;
-
-use Yii;
+namespace app\modules\v1\genres\models;
+use app\modules\v1\genres\repository\GenresRepository;
 
 /**
- * This is the model class for table "languages".
+ * This is the model class for table "genres".
  *
  * @property int $id
  * @property string $name
  *
- * @property Books[] $books
+ * @property \app\modules\v1\books\models\Books $books
  */
-class Languages extends \yii\db\ActiveRecord
+class Genres extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'languages';
+        return 'genres';
     }
 
     /**
@@ -51,15 +49,15 @@ class Languages extends \yii\db\ActiveRecord
      */
     public function getBooks()
     {
-        return $this->hasMany(Books::class, ['language' => 'id']);
+        return $this->hasMany(\app\modules\v1\books\models\Books::class, ['genre' => 'id']);
     }
 
     /**
      * {@inheritdoc}
-     * @return \app\modules\v1\repository\LanguagesRepository the active query used by this AR class.
+     * @return GenresRepository the active query used by this AR class.
      */
     public static function find()
     {
-        return new \app\modules\v1\repository\LanguagesRepository(get_called_class());
+        return new GenresRepository(get_called_class());
     }
 }

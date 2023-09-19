@@ -1,13 +1,13 @@
 <?php
 
-namespace app\modules\v1\repository;
+namespace app\modules\v1\language\repository;
 
 /**
- * This is the ActiveQuery class for [[\app\modules\v1\models\Authors]].
+ * This is the ActiveQuery class for [[\app\modules\v1\models\Languages]].
  *
- * @see \app\modules\v1\models\Authors
+ * @see \app\modules\v1\genres\models\Languages
  */
-class AuthorsRepository extends \yii\db\ActiveQuery
+class LanguagesRepository extends \yii\db\ActiveQuery
 {
     /*public function active()
     {
@@ -16,7 +16,7 @@ class AuthorsRepository extends \yii\db\ActiveQuery
 
     /**
      * {@inheritdoc}
-     * @return \app\modules\v1\models\Authors[]|array
+     * @return \app\modules\v1\genres\models\Languages[]|array
      */
     public function all($db = null)
     {
@@ -25,7 +25,7 @@ class AuthorsRepository extends \yii\db\ActiveQuery
 
     /**
      * {@inheritdoc}
-     * @return \app\modules\v1\models\Authors|array|null
+     * @return \app\modules\v1\genres\models\Languages|array|null
      */
     public function one($db = null)
     {

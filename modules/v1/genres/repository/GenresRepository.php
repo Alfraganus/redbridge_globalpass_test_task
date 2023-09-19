@@ -1,7 +1,5 @@
 <?php
-
-namespace app\modules\v1\repository;
-
+namespace app\modules\v1\genres\repository;
 /**
  * This is the ActiveQuery class for [[\app\modules\v1\models\Genres]].
  *
