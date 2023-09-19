@@ -81,22 +81,8 @@ use yii\rest\ActiveController;
  * )
  */
 
-
 class AuthorController extends ActiveController {
     public $modelClass = Authors::class;
-
-
-    public function behaviors()
-    {
-        return [
-            'verbs' => [
-                'class' => VerbFilter::class,
-                'actions' => [
-                    'update' => ['PUT', 'GET'],
-                ],
-            ],
-        ];
-    }
 
     public function actionSearchBooks()
     {
@@ -105,5 +91,4 @@ class AuthorController extends ActiveController {
 
         return $dataProvider;
     }
-
 }
